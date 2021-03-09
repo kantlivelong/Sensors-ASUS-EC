@@ -1,0 +1,12 @@
+Unit]
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=root
+ExecStart=/usr/local/bin/sensors-asus-ec.py -d -f
+
+[Install]
+WantedBy=multi-user.target
+
